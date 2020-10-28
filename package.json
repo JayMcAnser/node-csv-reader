@@ -1,10 +1,10 @@
 {
   "name": "csv-reader",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "A CSV stream reader, with many many features, and ability to work with the largest datasets",
   "main": "index.js",
   "scripts": {
-    "test": "node test/test.js"
+    "test": "node --expose-internals ./node_modules/.bin/mocha $(find lib --name '*spec.js') --exit --recursive"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,9 @@
     "url": "https://github.com/danielgindi/node-csv-reader/issues"
   },
   "homepage": "https://github.com/danielgindi/node-csv-reader",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.2.0"
   }
 }
